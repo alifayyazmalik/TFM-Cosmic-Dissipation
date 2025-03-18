@@ -25,6 +25,23 @@ This repository provides:
    - `src/params/lisa_config.yml`: Frequency bands and strain thresholds for Eq.8.  
 
 ---
+## How to Use These Files
+
+1. **Einstein Toolkit Templates**:  
+   - Copy `templates/einstein_toolkit/` to your Einstein Toolkit setup.  
+   - Replace `[YOUR_TFM_TERMS_HERE]` with your implementation of Eqs.1-5.
+
+2. **LISA Gravitational Waves**:  
+   - Use `templates/hpc_jobs/run_lisa_echoes.slurm` as a SLURM template.  
+   - Set `--Gamma0` and `--output` paths for your HPC cluster.
+
+3. **CMB Analysis**:  
+   - Modify `templates/boltzmann/camb_tfm_params.py` to inject TFM terms into CAMB/CLASS.  
+
+## Validation Steps  
+- **CMB**: Run CAMB/CLASS with your TFM-modified params and compare to Planck/WMAP data.  
+- **LISA**: Simulate GW echoes using your HPC solver and analyze against LISA’s sensitivity curve.  
+---
 
 ## Getting Started  
 
@@ -32,3 +49,4 @@ This repository provides:
 ```bash
 git clone https://github.com/AliFayyazMalik/TFM-Cosmic-Fate.git
 cd TFM-Cosmic-Fate
+
