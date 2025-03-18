@@ -1,0 +1,12 @@
+# ==============================================
+# TFM Wave-Lump Hydrodynamics (Adapted GRHydro)
+# ==============================================
+# !! Replace [YOUR_TFM_TERMS_HERE] with your implementation
+
+HydroBase::evolution_method = "TFM_lumps"
+TFM::wave_lump_coeff       = 1.0e-5  # κ from Eq.1
+TFM::dissipation_rate      = 1.0e-3  # Γ₀ from Eq.1
+TFM::include_mini_bangs    = "yes"   # Set to "no" to disable Eq.4
+
+# [YOUR_TFM_TERMS_HERE] - Add TFM-specific terms
+# ...
